@@ -18,7 +18,7 @@ public class LoadNewScene : MonoBehaviour {
 
     IEnumerator loading()
     {
-        yield return new WaitForSeconds(45f);
+        yield return new WaitForSeconds(25f);
         asyn = Application.LoadLevelAsync(3);
         yield return asyn;
     }
