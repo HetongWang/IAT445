@@ -12,6 +12,7 @@ public class BookFlipping : MonoBehaviour {
     private Animator anim;
     private GameObject player;
         private float timer = 0;
+        private bool triggered = false;
 
     private void Awake() {
         anim = GetComponent<Animator>();
@@ -39,14 +40,17 @@ public class BookFlipping : MonoBehaviour {
 
         void readytoload()
         {
-            StartCoroutine(loadLevel());
+            if (!triggered)
+                StartCoroutine(loadLevel());
         }
 
     IEnumerator loadLevel()
         {
+            triggered = true;
             while (timer < 5f)
             {
-                anim.speed = anim.speed * 1.1f;
+                Debug.Log(timer);
+                anim.speed = anim.speed > 4 ? 4 : anim.speed * (1.0f + Time.deltaTime);
                 timer += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
