@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: 6d11748c7de767f45889e3c79cb5d80d
+timeCreated: 1457592661
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: pCone1
+    100002: pCylinder1
+    100004: pCylinder2
+    100006: pCylinder3
+    100008: pCylinder4
+    100010: pCylinder5
+    100012: pSphere1
+    100014: pSphere2
+    100016: pSphere3
+    100018: pSphere4
+    100020: pSphere5
+    100022: pTorus1
+    100024: pTorus2
+    100026: //RootNode
+    100028: transform10
+    100030: transform11
+    100032: transform12
+    100034: transform13
+    100036: transform14
+    100038: transform15
+    100040: transform16
+    100042: transform5
+    100044: transform6
+    100046: transform7
+    100048: transform8
+    100050: transform9
+    400000: pCone1
+    400002: pCylinder1
+    400004: pCylinder2
+    400006: pCylinder3
+    400008: pCylinder4
+    400010: pCylinder5
+    400012: pSphere1
+    400014: pSphere2
+    400016: pSphere3
+    400018: pSphere4
+    400020: pSphere5
+    400022: pTorus1
+    400024: pTorus2
+    400026: //RootNode
+    400028: transform10
+    400030: transform11
+    400032: transform12
+    400034: transform13
+    400036: transform14
+    400038: transform15
+    400040: transform16
+    400042: transform5
+    400044: transform6
+    400046: transform7
+    400048: transform8
+    400050: transform9
+    2300000: pSphere5
+    3300000: pSphere5
+    4300000: pSphere5
+    7400000: sayhii
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: sayhii
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCone1
+        weight: 1
+      - path: pCone1/transform6
+        weight: 1
+      - path: pCylinder1
+        weight: 1
+      - path: pCylinder1/transform14
+        weight: 1
+      - path: pCylinder2
+        weight: 1
+      - path: pCylinder2/transform12
+        weight: 1
+      - path: pCylinder3
+        weight: 1
+      - path: pCylinder3/transform11
+        weight: 1
+      - path: pCylinder4
+        weight: 1
+      - path: pCylinder4/transform10
+        weight: 1
+      - path: pCylinder5
+        weight: 1
+      - path: pCylinder5/transform9
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      - path: pSphere1/transform16
+        weight: 1
+      - path: pSphere2
+        weight: 1
+      - path: pSphere2/transform15
+        weight: 1
+      - path: pSphere3
+        weight: 1
+      - path: pSphere3/transform8
+        weight: 1
+      - path: pSphere4
+        weight: 1
+      - path: pSphere4/transform7
+        weight: 1
+      - path: pSphere5
+        weight: 1
+      - path: pTorus1
+        weight: 1
+      - path: pTorus1/transform13
+        weight: 1
+      - path: pTorus2
+        weight: 1
+      - path: pTorus2/transform5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
