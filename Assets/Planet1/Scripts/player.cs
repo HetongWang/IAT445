@@ -4,6 +4,7 @@ using System.Collections;
 public class player : MonoBehaviour {
 
     public GameObject mainCamera;
+    public GameObject titanNeedtoMove;
     private GameObject looked = null;
     private GameObject titan;
 
@@ -17,6 +18,7 @@ public class player : MonoBehaviour {
 	void Start () {
         mainCamera = transform.Find("MainCamera").gameObject;
         anim = GetComponent<Animator>();
+        StartCoroutine(startMove());
 	}
 	
 	// Update is called once per frame
@@ -39,12 +41,6 @@ public class player : MonoBehaviour {
 
         }
 
-        if (looked.transform.name == "SummonBut" && staringTime > 2)
-        {
-            looked.GetComponent<TitanButton>().press();
-            StartCoroutine(startMove());
-        }
-
         if (onTitan)
         {
             transform.localRotation = Quaternion.Euler(new Vector3(0, 90, 0));
@@ -56,13 +52,21 @@ public class player : MonoBehaviour {
     {
         float speed = 1.5f;
         Vector3 target = transform.position;
+        StartCoroutine(moveTitan());
 
         while (transform.position.z < -1.35f)
         {
+
             target.z += speed * Time.deltaTime;
             transform.position = target;
             yield return new WaitForEndOfFrame();
         }
+    }
+
+    IEnumerator moveTitan()
+    {
+        yield return new WaitForSeconds(3f);
+        titanNeedtoMove.GetComponent<Titan>().moveStart();
     }
 
     void lookat()

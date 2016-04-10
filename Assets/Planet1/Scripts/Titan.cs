@@ -7,6 +7,7 @@ public class Titan : MonoBehaviour {
 
     [HideInInspector]
     static public float sealevel = 133.0f;
+    public GameObject triggerFellow;
 
     private Animator anim;
     private Rigidbody rig;
@@ -57,6 +58,7 @@ public class Titan : MonoBehaviour {
     public void action3()
     {
         StartCoroutine(standUp());
+        triggerFellow.SetActive(true);
     }
 
     void action3Done()
