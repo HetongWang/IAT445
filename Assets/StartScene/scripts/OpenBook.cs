@@ -34,13 +34,13 @@ namespace VRStandardAssets.Examples
         private void HandleOver()
         {
             Debug.Log("Show over state");
-            anim.SetBool("startChange", true);
+            anim.SetBool("start", true);
         }
 
         private void HandleOut()
         {
             Debug.Log("Show out state");
-            anim.SetBool("startChange", false);
+            anim.SetBool("start", false);
         }
     }
 }
