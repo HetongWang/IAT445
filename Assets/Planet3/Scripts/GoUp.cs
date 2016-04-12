@@ -21,9 +21,17 @@ public class GoUp : MonoBehaviour {
 	}
 
 	public void actionUp(){
-		anim.SetBool ("up", true);
-		anim2.SetBool("up",true);
+		
+		StartCoroutine (roseReverse ());
+	}
+
+	IEnumerator roseReverse()
+	{
+		anim2.SetBool ("up", true);
+		anim.SetBool("up",true);
+		yield return new WaitForSeconds (6f);
 		anim3.SetBool("roseFallReverse", true);
+
 	}
 
 }
