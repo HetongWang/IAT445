@@ -16,6 +16,7 @@ public class BookFlipping : MonoBehaviour {
 
     private void Awake() {
         anim = GetComponent<Animator>();
+		anim.speed = 0.5f;
     }
 
     private void OnEnable() {
