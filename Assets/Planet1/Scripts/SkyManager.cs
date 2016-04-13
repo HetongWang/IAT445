@@ -24,7 +24,7 @@ public class SkyManager : MonoBehaviour {
     {
         float duration = 25;
         float end = 1f;
-        yield return new WaitForSeconds(70);
+        yield return new WaitForSeconds(55);
 
         float timer = 0;
         float fog = RenderSettings.fogDensity;
