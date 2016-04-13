@@ -2,8 +2,11 @@
 using System.Collections;
 
 public class parent : MonoBehaviour {
-	public GameObject o;
-	public GameObject o2;
+	public AudioSource planet2Voice1;
+	public AudioSource planet2Voice2;
+	public AudioSource planet2Voice3;
+	public AudioSource planet2Voice4;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -13,7 +16,21 @@ public class parent : MonoBehaviour {
 	void Update () {
 	
 	}
-	void ChangeParent(){
-		o2.transform.parent = o.transform;
+
+	void trigger1(){
+		planet2Voice1.Play();
 	}
+
+	void trigger2(){
+		planet2Voice2.Play();
+	}
+
+	void trigger3(){
+		planet2Voice3.Play();
+	}
+
+	void trigger4(){
+		planet2Voice4.Play();
+	}
+
 }
