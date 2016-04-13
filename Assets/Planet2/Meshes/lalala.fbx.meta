@@ -1,15 +1,29 @@
 fileFormatVersion: 2
-guid: 4cd58d5ac6d044c3d9d2a41f5af55eb5
+guid: 2cdf1c969f1a9734e975eac6211a4264
+timeCreated: 1460537672
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pCylinder1
+    100004: pSphere1
+    100006: pSphere2
+    100008: pSphere3
+    100010: transform1
+    100012: transform2
+    100014: transform3
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Polygon
-    7400000: modo_Anim
-    11100000: //RootNode
+    400002: pCylinder1
+    400004: pSphere1
+    400006: pSphere2
+    400008: pSphere3
+    400010: transform1
+    400012: transform2
+    400014: transform3
+    2300000: pSphere3
+    3300000: pSphere3
+    4300000: pSphere3
   materials:
     importMaterials: 1
     materialName: 0
@@ -34,11 +48,11 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.8
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
-    swapUVChannels: 1
+    swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
@@ -48,11 +62,11 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
-    tangentImportMode: 4
+    normalImportMode: 0
+    tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -68,7 +82,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
