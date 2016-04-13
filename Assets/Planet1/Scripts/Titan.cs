@@ -12,6 +12,10 @@ public class Titan : MonoBehaviour {
     private Animator anim;
     private Rigidbody rig;
     private GameObject player;
+
+	public AudioSource planet1Voice2;
+	public AudioSource planet1Voice3;
+	public AudioSource planet1Voice4;
     // Use this for initialization
 
     void Awake()
@@ -53,6 +57,7 @@ public class Titan : MonoBehaviour {
 
     void action2Done()
     {
+		planet1Voice2.Play ();
     }
 
     public void action3()
@@ -64,6 +69,7 @@ public class Titan : MonoBehaviour {
     void action3Done()
     {
         anim.SetInteger("action", 4);
+		planet1Voice3.Play ();
     }
 
     void action4Done()
@@ -72,4 +78,8 @@ public class Titan : MonoBehaviour {
         transform.position = new Vector3(0.5f, 136.5f, 477f);
         Application.LoadLevel(2);
     }
+
+	void triggerSunsetNarration(){
+		planet1Voice4.Play ();
+	}
 }

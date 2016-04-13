@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 06b06ef60a427414e83973cc84234da5
+timeCreated: 1460490005
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Bump0: {fileID: 2800000, guid: 841e75f01b2174cde9a99acaf12ef52a, type: 3}
+  - Bump1: {fileID: 2800000, guid: 841e75f01b2174cde9a99acaf12ef52a, type: 3}
+  - Bump2: {instanceID: 0}
+  - Bump3: {instanceID: 0}
+  - SnowTexture: {fileID: 2800000, guid: 841e75f01b2174cde9a99acaf12ef52a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
