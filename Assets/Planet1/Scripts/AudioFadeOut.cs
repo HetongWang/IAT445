@@ -30,6 +30,7 @@ public class AudioFadeOut : MonoBehaviour {
             ap.volume -= volume / duration * Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        ap.volume = 0;
+        if (ap.volume < 0)
+            ap.volume = 0;
     }
 }
