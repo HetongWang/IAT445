@@ -4,7 +4,6 @@ using System.Collections;
 public class Fade : MonoBehaviour {
 	
     public GameObject maincamera;
-    public GameObject audioFadeOut;
 	public Texture2D fadeOutTexture;
 	public float fadeSpeed = 0.8f;
 
@@ -20,12 +19,12 @@ public class Fade : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = o.GetComponent<Animator>();
+		StartCoroutine (fading());
 		Debug.Log (o.name);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		StartCoroutine (fading());
 	}
 
 	void OnGUI(){
@@ -59,7 +58,6 @@ public class Fade : MonoBehaviour {
     IEnumerator ending()
     {
         maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().FadeOut(true);
-        audioFadeOut.GetComponent<AudioFadeOut>().FadeOut();
 
         float delay = maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().m_FadeDuration;
         yield return new WaitForSeconds(delay + 1.5f);

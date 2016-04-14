@@ -9,7 +9,6 @@ public class AudioFadeOut : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        volume = ap.volume;
 	}
 	
 	// Update is called once per frame
@@ -19,6 +18,7 @@ public class AudioFadeOut : MonoBehaviour {
 
     public void FadeOut()
     {
+        volume = ap.volume;
         StartCoroutine(beginFadeOut());
     }
 
