@@ -78,7 +78,7 @@ public class Titan : MonoBehaviour {
     void action4Done()
     {
         Debug.Log("loading planet 2");
-        transform.position = new Vector3(0.5f, 136.0f, 477f);
+        transform.position = new Vector3(0.5f, 136.5f, 477f);
         titanGroup.GetComponent<Animator>().speed = 0;
         StartCoroutine(end());
     }
@@ -95,7 +95,7 @@ public class Titan : MonoBehaviour {
         audioFadeOut.GetComponent<AudioFadeOut>().FadeOut();
 
         float delay = maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().m_FadeDuration;
-        yield return new WaitForSeconds(delay + 0.5f);
+        yield return new WaitForSeconds(delay + 1.5f);
         Application.LoadLevel(2);
     }
 }
