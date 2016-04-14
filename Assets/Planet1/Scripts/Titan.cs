@@ -10,6 +10,7 @@ public class Titan : MonoBehaviour {
     public GameObject triggerFellow;
     public GameObject titanGroup;
     public GameObject maincamera;
+    public GameObject audioFadeOut;
 
     public AudioSource ap1;
     public AudioSource ap2;
@@ -79,11 +80,20 @@ public class Titan : MonoBehaviour {
         Debug.Log("loading planet 2");
         transform.position = new Vector3(0.5f, 136.5f, 477f);
         titanGroup.GetComponent<Animator>().speed = 0;
-        maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().FadeOut(true);
     }
 
     void audio3Trigger()
     {
         ap3.Play();
+    }
+
+    IEnumerator end()
+    {
+        maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().FadeOut(true);
+        audioFadeOut.GetComponent<AudioFadeOut>().FadeOut();
+
+        float delay = maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().m_FadeDuration;
+        yield return new WaitForSeconds(delay + 0.5f);
+        Application.LoadLevel(2);
     }
 }
