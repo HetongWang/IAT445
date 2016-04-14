@@ -40,6 +40,7 @@ public class SkyManager : MonoBehaviour {
             Color newcolor = Color.Lerp(specular, Color.clear, timer / duration);
             waterMaterial.SetColor("_SpecularColor", newcolor);
             timer += Time.deltaTime;
+
             yield return new WaitForEndOfFrame();
         }
     }
