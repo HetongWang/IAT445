@@ -28,10 +28,12 @@ public class audioLast : MonoBehaviour {
 
     void end()
     {
+		Debug.Log ("end");
         StartCoroutine(ending());
     }
     IEnumerator ending()
     {
+		Debug.Log ("ending");
         maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().FadeOut(true);
         audioFadeOut.GetComponent<AudioFadeOutGO>().FadeOut();
 
@@ -39,7 +41,6 @@ public class audioLast : MonoBehaviour {
         yield return new WaitForSeconds(delay + 1.5f);
         Application.LoadLevel(5);
     }
-
 
 
 }
