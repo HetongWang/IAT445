@@ -26,6 +26,7 @@ public class AudioFadeOut : MonoBehaviour {
     {
         while (ap.volume > 0)
         {
+            Debug.Log(ap.volume);
             ap.volume -= volume / duration * Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
