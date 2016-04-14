@@ -9,6 +9,10 @@ public class Titan : MonoBehaviour {
     static public float sealevel = 133.0f;
     public GameObject triggerFellow;
 
+    public AudioSource ap1;
+    public AudioSource ap2;
+    public AudioSource ap3;
+
     private Animator anim;
     private Rigidbody rig;
     private GameObject player;
@@ -53,6 +57,7 @@ public class Titan : MonoBehaviour {
 
     void action2Done()
     {
+        ap1.Play();
     }
 
     public void action3()
@@ -64,6 +69,7 @@ public class Titan : MonoBehaviour {
     void action3Done()
     {
         anim.SetInteger("action", 4);
+        ap2.Play();
     }
 
     void action4Done()
@@ -71,5 +77,10 @@ public class Titan : MonoBehaviour {
         Debug.Log("loading planet 2");
         transform.position = new Vector3(0.5f, 136.5f, 477f);
         Application.LoadLevel(2);
+    }
+
+    void audio3Trigger()
+    {
+        ap3.Play();
     }
 }

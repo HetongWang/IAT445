@@ -8,6 +8,8 @@ public class player : MonoBehaviour {
     private GameObject looked = null;
     private GameObject titan;
 
+    public AudioSource ap1;
+
     private Animator anim;
     private bool onTitan = false;
     private float staringTime = 0;
@@ -52,6 +54,7 @@ public class player : MonoBehaviour {
     {
         float speed = 1.5f;
         Vector3 target = transform.position;
+        ap1.Play();
         yield return new WaitForSeconds(3);
         StartCoroutine(moveTitan());
 
