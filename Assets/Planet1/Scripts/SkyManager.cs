@@ -31,7 +31,6 @@ public class SkyManager : MonoBehaviour {
         Color specular = waterMaterial.GetColor("_SpecularColor");
         while (skyMaterial.GetFloat("_SkyBlend") < end)
         {
-            Debug.Log(timer / duration);
             float blend = skyMaterial.GetFloat("_SkyBlend") + end / duration * Time.deltaTime;
             skyMaterial.SetFloat("_SkyBlend", blend);
 
@@ -42,6 +41,7 @@ public class SkyManager : MonoBehaviour {
             timer += Time.deltaTime;
 
             yield return new WaitForEndOfFrame();
+            DynamicGI.UpdateEnvironment();
         }
     }
 }

@@ -4,11 +4,11 @@ using System.Collections;
 public class player : MonoBehaviour {
 
     public GameObject mainCamera;
-    public GameObject titanNeedtoMove;
+    public GameObject titan;
     private GameObject looked = null;
-    private GameObject titan;
 
     public AudioSource ap1;
+    public AudioSource ap2;
 
     private Animator anim;
     private bool onTitan = false;
@@ -26,28 +26,38 @@ public class player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         lookat();
-        if (Input.GetButton("Fire"))
-        {
-            Debug.Log(looked.transform.name);
-            if (looked.transform.name == "Titan" && onTitan == false)
-            {
-                Vector3 boardPos = looked.transform.Find("joint7").Find("board").position;
-                if (Vector3.Distance(boardPos, transform.position) < triggerDistance)
-                {
-                    looked.GetComponent<Titan>().action3();
-                    titan = looked;
-                    onTitan = true;
-                    transform.parent = titan.transform;
-                }
-            }
+        //if (Input.GetButton("Fire"))
+        //{
+        //    Debug.Log(looked.transform.name);
+        //    if (looked.transform.name == "Titan" && onTitan == false)
+        //    {
 
-        }
+        //        Vector3 boardPos = looked.transform.Find("joint7").Find("board").position;
+        //        if (Vector3.Distance(boardPos, transform.position) < triggerDistance)
+        //        {
+        //            looked.GetComponent<Titan>().action3();
+        //            titan = looked;
+        //            onTitan = true;
+        //            transform.parent = titan.transform;
+        //        }
+        //    }
+
+        //}
 
         if (onTitan)
         {
             transform.localRotation = Quaternion.Euler(new Vector3(0, 90, 0));
             transform.position = titan.transform.Find("joint7").Find("board").position;
         }
+    }
+
+    void jump2titan()
+    {
+        Vector3 boardPos = titan.transform.Find("joint7").Find("board").position;
+        titan.GetComponent<Titan>().action3();
+        onTitan = true;
+        transform.parent = titan.transform;
+
     }
 
     IEnumerator startMove()
@@ -66,12 +76,19 @@ public class player : MonoBehaviour {
             transform.position = target;
             yield return new WaitForEndOfFrame();
         }
+        if (transform.position.z >= -1.35f)
+        {
+            yield return new WaitForSeconds(7);
+            ap2.Play();
+            yield return new WaitForSeconds(6);
+            jump2titan();
+        }
     }
 
     IEnumerator moveTitan()
     {
         yield return new WaitForSeconds(3f);
-        titanNeedtoMove.GetComponent<Titan>().moveStart();
+        titan.GetComponent<Titan>().moveStart();
     }
 
     void lookat()

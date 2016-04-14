@@ -60,7 +60,6 @@ public class Titan : MonoBehaviour {
 
     void action2Done()
     {
-        ap1.Play();
     }
 
     public void action3()
