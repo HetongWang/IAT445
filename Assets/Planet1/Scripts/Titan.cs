@@ -8,6 +8,8 @@ public class Titan : MonoBehaviour {
     [HideInInspector]
     static public float sealevel = 133.0f;
     public GameObject triggerFellow;
+    public GameObject titanGroup;
+    public GameObject maincamera;
 
     public AudioSource ap1;
     public AudioSource ap2;
@@ -76,7 +78,8 @@ public class Titan : MonoBehaviour {
     {
         Debug.Log("loading planet 2");
         transform.position = new Vector3(0.5f, 136.5f, 477f);
-        Application.LoadLevel(2);
+        titanGroup.GetComponent<Animator>().speed = 0;
+        maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().FadeOut(true);
     }
 
     void audio3Trigger()
