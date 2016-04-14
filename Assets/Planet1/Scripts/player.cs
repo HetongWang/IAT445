@@ -14,8 +14,6 @@ public class player : MonoBehaviour {
     private float staringTriggerDelay = 2;
     private float triggerDistance = 3;
 
-	public AudioSource planet1Voice1;
-
 	// Use this for initialization
 	void Start () {
         mainCamera = transform.Find("MainCamera").gameObject;
@@ -69,7 +67,6 @@ public class player : MonoBehaviour {
     IEnumerator moveTitan()
     {
         yield return new WaitForSeconds(3f);
-		planet1Voice1.Play ();
         titanNeedtoMove.GetComponent<Titan>().moveStart();
     }
 
