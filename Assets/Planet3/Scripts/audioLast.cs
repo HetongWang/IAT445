@@ -2,9 +2,11 @@
 using System.Collections;
 
 public class audioLast : MonoBehaviour {
+
 	public AudioSource part3;
 	public AudioSource part4;
-
+    public GameObject maincamera;
+    public GameObject audioFadeOut;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +25,21 @@ public class audioLast : MonoBehaviour {
 	public void Action4(){
 		part4.Play ();
 	}
+
+    void end()
+    {
+        StartCoroutine(ending());
+    }
+    IEnumerator ending()
+    {
+        maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().FadeOut(true);
+        audioFadeOut.GetComponent<AudioFadeOutGO>().FadeOut();
+
+        float delay = maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().m_FadeDuration;
+        yield return new WaitForSeconds(delay + 1.5f);
+        Application.LoadLevel(5);
+    }
+
 
 
 }

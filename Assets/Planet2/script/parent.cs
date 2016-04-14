@@ -6,6 +6,8 @@ public class parent : MonoBehaviour {
 	public AudioSource planet2Voice2;
 	public AudioSource planet2Voice3;
 	public AudioSource planet2Voice4;
+    public GameObject maincamera;
+    public GameObject audioFadeOut;
 
 	// Use this for initialization
 	void Start () {
@@ -32,5 +34,20 @@ public class parent : MonoBehaviour {
 	void trigger4(){
 		planet2Voice4.Play();
 	}
+
+    void end()
+    {
+        StartCoroutine(ending());
+    }
+
+    IEnumerator ending()
+    {
+        maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().FadeOut(true);
+        audioFadeOut.GetComponent<AudioFadeOut>().FadeOut();
+
+        float delay = maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().m_FadeDuration;
+        yield return new WaitForSeconds(delay + 1.5f);
+        Application.LoadLevel(4);
+    }
 
 }

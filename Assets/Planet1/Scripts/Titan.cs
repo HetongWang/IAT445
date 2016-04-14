@@ -90,7 +90,6 @@ public class Titan : MonoBehaviour {
 
     IEnumerator end()
     {
-        Debug.Log("adf");
         maincamera.GetComponent<VRStandardAssets.Utils.VRCameraFade>().FadeOut(true);
         audioFadeOut.GetComponent<AudioFadeOut>().FadeOut();
 
