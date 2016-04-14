@@ -54,8 +54,9 @@ public class player : MonoBehaviour {
     {
         float speed = 1.5f;
         Vector3 target = transform.position;
-        ap1.Play();
+        
         yield return new WaitForSeconds(3);
+		ap1.Play();
         StartCoroutine(moveTitan());
 
         while (transform.position.z < -1.35f)
